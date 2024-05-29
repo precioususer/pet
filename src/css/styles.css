@@ -82,7 +82,7 @@ body {
 
   scroll-snap-align: start;
 
-  background-color: rgba(131, 230, 17, 0.411);
+  background-color: rgba(136, 255, 0, 0.411);
 }
 
 /* ---- PRODUCT ---- */
@@ -95,7 +95,7 @@ body {
 
   scroll-snap-align: start;
 
-  background-color: rgba(92, 17, 230, 0.411);
+  background-color: rgba(89, 0, 255, 0.411);
 }
 
 /* ---- AUTH ---- */
@@ -108,7 +108,7 @@ body {
 
   scroll-snap-align: start;
 
-  background-color: rgba(230, 173, 17, 0.411);
+  background-color: rgba(255, 187, 0, 0.411);
 }
 
 /* -------- FOOTER -------- */
