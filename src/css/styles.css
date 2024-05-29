@@ -1,0 +1,129 @@
+@import "./reset.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Ubuntu+Sans+Mono:wght@400..700&display=swap");
+
+:root {
+  --PADDING: 10px;
+  --MAIN_COLOR: white;
+  --SECONDARY_COLOR: black;
+  --BORDER_SIZE: 3px;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url(./../../public/images/img.jpg);
+
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.scroll {
+  scroll-snap-align: start;
+}
+
+/* -------- HEADER -------- */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  position: fixed;
+
+  gap: 10px;
+  font-size: 15px;
+
+  height: 40px;
+  width: calc(100% - var(--BORDER_SIZE) * 4);
+
+  margin-top: calc(var(--PADDING) / 2);
+  margin-bottom: var(--PADDING);
+
+  background-color: var(--MAIN_COLOR);
+  border-radius: var(--PADDING);
+  border: var(--BORDER_SIZE) solid var(--SECONDARY_COLOR);
+  a {
+    outline: none;
+    text-decoration: none;
+    color: var(--SECONDARY_COLOR);
+  }
+}
+
+/* -------- MAIN -------- */
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+/* ---- ABOUT ---- */
+
+.about {
+  display: flex;
+
+  min-height: 100vh;
+  width: 100%;
+
+  scroll-snap-align: start;
+
+  background-color: rgba(131, 230, 17, 0.411);
+}
+
+/* ---- PRODUCT ---- */
+
+.product {
+  display: flex;
+
+  min-height: 100vh;
+  width: 100%;
+
+  scroll-snap-align: start;
+
+  background-color: rgba(92, 17, 230, 0.411);
+}
+
+/* ---- AUTH ---- */
+
+.auth {
+  display: flex;
+
+  min-height: 100vh;
+  width: 100%;
+
+  scroll-snap-align: start;
+
+  background-color: rgba(230, 173, 17, 0.411);
+}
+
+/* -------- FOOTER -------- */
+
+.footer {
+  display: flex;
+
+  padding: var(--PADDING);
+
+  min-height: 100px;
+  width: calc(100% - var(--PADDING) * 2);
+
+  scroll-snap-align: end;
+
+  background-color: var(--SECONDARY_COLOR);
+  color: var(--MAIN_COLOR);
+  font-size: 15px;
+}
