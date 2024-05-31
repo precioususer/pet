@@ -37,7 +37,7 @@ body {
 /* -------- HEADER -------- */
 
 .header {
-  z-index: 1;
+  z-index: 3;
 
   display: flex;
   flex-direction: row;
@@ -112,8 +112,7 @@ body {
 }
 
 .slides {
-  display: flex;
-  min-height: 200px;
+  min-height: 50px;
 
   padding-top: calc(var(--PADDING) * 2);
   padding-bottom: calc(var(--PADDING) * 2);
@@ -126,14 +125,38 @@ body {
   overflow-x: hidden;
 }
 
+/* .slides::before {
+  content: "OUR";
+  position: relative;
+  top: 7%;
+  left: 14%;
+  transform: translate(-50%, -20%);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 197%;
+  font-weight: 900;
+  z-index: 1;
+}
+
+.slides::after {
+  content: "TEAM";
+  position: relative;
+  top: 114%;
+  left: -196%;
+  transform: translate(-50%, 60%);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 245%;
+  font-weight: 900;
+  z-index: 1;
+}
+
 .block {
   position: relative;
   left: 0px;
 
-  height: 100%;
-
   border-radius: 30%;
-}
+
+  z-index: 2;
+} */
 
 /* ---- PRODUCT ---- */
 
@@ -157,8 +180,139 @@ body {
   min-height: 100vh;
   width: 100%;
 
+  font-size: 25px;
+
   padding-top: calc(var(--PADDING) * 6);
-  background-color: rgba(255, 187, 0, 0.411);
+}
+
+.auth-block {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 15px;
+}
+
+/* -- LOGIN / PASSWORD -- */
+
+.log-input {
+  height: 25px;
+  padding: 0 calc(var(--PADDING) / 2) 0 calc(var(--PADDING) / 2);
+
+  font-size: inherit;
+  color: var(--SECONDARY_COLOR);
+
+  transition-duration: 1s;
+
+  .log-input::placeholder {
+    color: var(--SECONDARY_COLOR);
+  }
+}
+
+.password:valid {
+  background-color: lightgreen;
+}
+
+.password:invalid {
+  background-color: var(--MAIN_COLOR);
+}
+
+/* -- CHOOSER -- */
+
+.sex {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--PADDING);
+  input {
+    font-size: inherit;
+  }
+}
+
+.prefer {
+  display: flex;
+  margin-bottom: var(--PADDING);
+  align-items: center;
+}
+
+.file-select {
+  display: flex;
+  font-size: inherit;
+  align-items: center;
+  input {
+    font-size: inherit;
+  }
+}
+
+/* -- TEXT AREA -- */
+
+.info-block {
+  display: flex;
+  flex-wrap: nowrap;
+
+  margin-bottom: var(--PADDING);
+  gap: 10px;
+  width: 100%;
+}
+
+.info {
+  min-width: auto;
+
+  font-size: inherit;
+
+  padding: calc(var(--PADDING) / 2);
+  margin: 0;
+
+  color: var(--SECONDARY_COLOR);
+}
+
+.gif {
+  height: 50%;
+  width: 50%;
+
+  border-radius: var(--PADDING);
+  border: var(--BORDER_SIZE) solid var(--MAIN_COLOR);
+}
+
+/* -- SUBMIT/CLEAR -- */
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: var(--PADDING);
+
+  margin-bottom: var(--PADDING);
+}
+
+.button {
+  height: 30px;
+  width: 50%;
+
+  font-size: inherit;
+
+  border: var(--BORDER_SIZE) solid var(--MAIN_COLOR);
+  border-radius: var(--PADDING);
+
+  background-color: var(--SECONDARY_COLOR);
+
+  color: var(--MAIN_COLOR);
+
+  transition-duration: 0.5s;
+}
+
+.check:hover {
+  box-shadow: inset 0 0 20px rgb(1, 189, 1);
+}
+
+.clear:hover {
+  box-shadow: inset 0 0 20px rgb(235, 66, 15);
+}
+
+.check:active {
+  background-color: rgb(1, 189, 1);
+}
+
+.clear:active {
+  background-color: rgb(235, 66, 15);
 }
 
 /* -------- FOOTER -------- */
