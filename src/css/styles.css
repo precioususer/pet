@@ -36,10 +36,14 @@ body {
   scroll-snap-align: start;
 }
 
+.scroll-center {
+  scroll-snap-align: center;
+}
+
 /* -------- HEADER -------- */
 
 .header {
-  z-index: 3;
+  z-index: 10;
 
   display: flex;
   flex-direction: row;
@@ -176,7 +180,151 @@ body {
   width: 100%;
 
   padding-top: calc(var(--PADDING) * 6);
-  background-color: rgba(89, 0, 255, 0.411);
+}
+
+.product-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.description {
+  font-size: 15px;
+  margin-bottom: var(--PADDING);
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.logo1 {
+  scale: 0.5;
+
+  animation: scaleLogo1 10s infinite;
+}
+
+@keyframes scaleLogo1 {
+  0%,
+  33.3%,
+  100% {
+    scale: 0.5;
+  }
+  16.65% {
+    scale: 0.8;
+  }
+}
+
+.logo2 {
+  scale: 0.5;
+
+  animation: scaleLogo2 10s infinite;
+}
+
+@keyframes scaleLogo2 {
+  0%,
+  66.6%,
+  100% {
+    scale: 0.5;
+  }
+  50% {
+    scale: 0.8;
+  }
+}
+
+.logo3 {
+  scale: 0.5;
+
+  animation: scaleLogo3 10s infinite;
+}
+
+@keyframes scaleLogo3 {
+  0%,
+  33.3%,
+  100% {
+    scale: 0.5;
+  }
+  83.3% {
+    scale: 0.8;
+  }
+}
+
+.pictures {
+  display: flex;
+}
+
+.picture {
+  height: 150px;
+
+  border-radius: var(--PADDING);
+}
+
+.picture1 {
+  position: relative;
+  top: 0px;
+  left: 266.667px;
+}
+
+.picture2 {
+  position: relative;
+  top: 0px;
+  left: 0px;
+
+  opacity: 0;
+
+  animation: fadePicture2 10s infinite;
+}
+
+@keyframes fadePicture2 {
+  0%,
+  66.6%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.picture3 {
+  position: relative;
+  top: 0px;
+  left: -266.667px;
+
+  opacity: 0;
+
+  animation: fadePicture3 10s infinite;
+}
+
+@keyframes fadePicture3 {
+  0%,
+  33.3%,
+  100% {
+    opacity: 0;
+  }
+  83.3% {
+    opacity: 1;
+  }
+}
+
+.appart {
+  width: 100%;
+
+  scale: 0.98;
+  filter: grayscale();
+
+  margin-bottom: var(--PADDING);
+
+  border-radius: var(--PADDING);
 }
 
 /* ---- AUTH ---- */
@@ -275,7 +423,6 @@ body {
 }
 
 .gif {
-  height: 50%;
   width: 50%;
 
   border-radius: var(--PADDING);
